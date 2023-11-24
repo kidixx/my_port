@@ -3,18 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet"  type="text/css" href="./src/css/style.css">
+    <link rel="stylesheet"  type="text/css" href="style.css">
+    <link rel="shortcut icon" href="/background/btdc.jpg" type="image/x-icon">
     <script src="http://kit.fontawesome.com/c9f5871d83.js" crossorigin="anonymous"></script>
 
     <title>BDTC login</title>
 </head>
 <body>
-    <header class="Header">
+    <header class="Header navbar">
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
         <nav class="nav">
-            <a href="#"> Home </a>
-            <a href="#"> About </a>
-            <a href="#"> Service </a>
-            <a href="#"> Contact </a>
+            <ul class="nav-list">
+            <!-- <img style="width: 120px; height: 120px; filter: brightness(0) invert(1);" src="./background/bdtc.png" alt=""> -->
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Service</a></li>
+            <li><a href="#">Contact</a></li>
+            </ul>
         </nav>
         <div class="search">
             <input type="text" placeholder="Search...">
@@ -31,10 +40,6 @@
                 Better Days Through Crypto.
             </pre>
         </div>
-            <div class="icon">
-                <i class=" fa-brands fa-telegram"></i>
-                <i class=" fa-brands fa-twitter"></i>
-            </div>
 
         </div>
         <div class="login">
@@ -63,6 +68,9 @@
 
     </section>
 
-  
+    <footer>
+        Privacy • Terms • Refund  | BDTC &copy; 2023 All Right Reserved.
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>

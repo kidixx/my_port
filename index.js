@@ -7,14 +7,19 @@ const app = express();
 const PORT = process.env.PORT || 5500;
 
 // Use express.static to serve static files
-app.use(express.static(path.join(__dirname, '../'))); // this should serve the static files from the `src` directory
+// Serve static files
+// Serve static files
+app.use(express.static('public'));
+app.use(express.static(path.join(__dirname, '/public' + '/css')));
+app.use(express.static(path.join(__dirname, '/public' + '/js')));
+
 
 app.use('api', apiRoutes);
 
 // Catch-all route for any other requests
 app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, '../../index.html'));
-  });
+  res.sendFile(path.join(__dirname, 'views/index.html'));
+});
   
 
 app.listen(PORT, () => {

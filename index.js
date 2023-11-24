@@ -17,10 +17,14 @@ app.use(express.static(path.join(__dirname, '/public' + '/js')));
 app.use('api', apiRoutes);
 
 // Catch-all route for any other requests
-app.get('*', (req, res) => {
+app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'views/index.html'));
 });
   
+app.get('/about', (req, res) => {
+  res.sendFile(path.join(__dirname, 'views/about.html'));
+});
+
 
 app.listen(PORT, () => {
     console.log(`Kidixx Server is Listening on Port:${PORT}`);
